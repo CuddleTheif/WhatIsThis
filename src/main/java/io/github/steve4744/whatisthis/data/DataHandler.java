@@ -65,6 +65,40 @@ public class DataHandler {
 	}
 
 	/**
+	 * Marks the plugin with the given name as enabled for reading blocks
+	 * 
+	 * @author CuddleTheif
+	 * @param plugin The name of the plugin to enable
+	 */
+	public void setEnabled(String plugin){
+		if(plugin.equals("Slimefun"))
+			this.slimefun = true;
+		else if(plugin.equals("Nova"))
+			this.nova = true;
+		else if(plugin.equals("ItemsAdder"))
+			this.itemsadder = true;
+		else if(plugin.equals("Oraxen"))
+			this.oraxen = true;
+	}
+
+	/**
+	 * Marks the plugin with the given name as disabled for reading blocks
+	 * 
+	 * @author CuddleTheif
+	 * @param plugin The name of the plugin to disable
+	 */
+	public void setDisabled(String plugin){
+		if(plugin.equals("Slimefun"))
+			this.slimefun = false;
+		else if(plugin.equals("Nova"))
+			this.nova = false;
+		else if(plugin.equals("ItemsAdder"))
+			this.itemsadder = false;
+		else if(plugin.equals("Oraxen"))
+			this.oraxen = false;
+	}
+
+	/**
 	 * Get the localised material name. Cater for vanilla issues with WALL_ items.
 	 * @param target material name
 	 * @param player

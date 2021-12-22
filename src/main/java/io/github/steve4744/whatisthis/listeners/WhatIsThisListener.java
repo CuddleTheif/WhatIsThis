@@ -26,9 +26,12 @@ package io.github.steve4744.whatisthis.listeners;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.server.PluginDisableEvent;
+import org.bukkit.event.server.PluginEnableEvent;
 import org.bukkit.inventory.EquipmentSlot;
 
 import io.github.steve4744.whatisthis.WhatIsThis;
@@ -51,4 +54,22 @@ public class WhatIsThisListener implements Listener {
 			plugin.getDisplayHandler().getVisualMethod(event.getClickedBlock(), player);
 		}
 	}
+
+	/**
+	 * Checks if another plugin we are watching for is enabled
+	 * @author CuddleTheif
+	 */
+	@EventHandler(priority = EventPriority.MONITOR)
+    protected void onPluginEnable(PluginEnableEvent event) {
+		this.plugin.getDataHandler().setEnabled(event.getPlugin().getName());
+    }
+
+	/**
+	 * Checks if another plugin we are watching for is disabled
+	 * @author CuddleTheif
+	 */
+    @EventHandler(priority = EventPriority.MONITOR)
+    protected void onPluginDisable(PluginDisableEvent event) {
+		this.plugin.getDataHandler().setDisabled(event.getPlugin().getName());
+    }
 }
