@@ -46,7 +46,7 @@ public class PlayerMoveListener implements Listener {
 			return;
 		}
 		Player player = event.getPlayer();
-		if (player.hasPermission("whatisthis.use")) {
+		if (player.hasPermission("whatisthis.use") && !player.hasMetadata("WIT.hidden")) {
 			plugin.getDisplayHandler().getVisualMethod(Utils.getTargetBlock(player), player);
 		}
 	}

@@ -29,6 +29,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.metadata.FixedMetadataValue;
 
 import io.github.steve4744.whatisthis.WhatIsThis;
 import io.github.steve4744.whatisthis.utils.Utils;
@@ -50,9 +51,31 @@ public class WhatIsThisCommand implements CommandExecutor {
 		
 		if (!sender.hasPermission("whatisthis.use")) {
 			sender.sendMessage(prefix + "You do not have permission to run this command");
-			return true;
+			return false;
 		}
 		if (args.length > 0) {
+
+			// Check if it's always on and the user is trying to use the display command
+			if ((sender instanceof Player) && 
+					this.plugin.getSettings().isAutoDisplayEnabled() && 
+					args[0].equalsIgnoreCase("toggledisplay")){
+
+				// Make sure the user has permission to use this command
+				if (!sender.hasPermission("whatisthis.use")) {
+					sender.sendMessage(prefix + "You do not have permission to run this command");
+					return false;
+				}
+
+				// Flip the hidden setting in the player
+				Player player = (Player) sender;
+				if(player.hasMetadata("WIT.hidden"))
+					player.removeMetadata("WIT.hidden", plugin);
+				else
+					player.setMetadata("WIT.hidden", new FixedMetadataValue(plugin, "off"));
+				return true;
+
+			}
+
 			if (!sender.hasPermission("whatisthis.admin")) {
 				sender.sendMessage(prefix + "You do not have permission to run this command");
 				return false;
