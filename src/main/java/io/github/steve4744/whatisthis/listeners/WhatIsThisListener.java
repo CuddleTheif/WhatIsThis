@@ -62,6 +62,8 @@ public class WhatIsThisListener implements Listener {
 	@EventHandler(priority = EventPriority.MONITOR)
     protected void onPluginEnable(PluginEnableEvent event) {
 		this.plugin.getDataHandler().setEnabled(event.getPlugin().getName());
+		if(event.getPlugin().getName().equals("ItemsAdder"))
+			plugin.createIAHud();
     }
 
 	/**
@@ -71,5 +73,7 @@ public class WhatIsThisListener implements Listener {
     @EventHandler(priority = EventPriority.MONITOR)
     protected void onPluginDisable(PluginDisableEvent event) {
 		this.plugin.getDataHandler().setDisabled(event.getPlugin().getName());
+		if(event.getPlugin().getName().equals("ItemsAdder"))
+			plugin.removeIAHud();
     }
 }

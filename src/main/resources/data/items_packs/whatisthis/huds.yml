@@ -1,0 +1,18 @@
+info:
+  namespace: "whatisthis"
+huds:
+  block:
+    enabled: true
+    show:
+      auto: true
+    type: CUSTOM
+  block_name:
+    enabled: true
+    show:
+      auto: true
+    type: CUSTOM
+  resource_name:
+    enabled: true
+    show:
+      auto: true
+    type: CUSTOM

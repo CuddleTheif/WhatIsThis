@@ -1,0 +1,378 @@
+info:
+  namespace: whatisthis
+font_images:
+  resource_blank:
+    suggest_in_command: false
+    path: resource_font/blank
+    y_position: 10
+    scale_ratio: 10
+  resource_a:
+    suggest_in_command: false
+    path: resource_font/a
+    y_position: 10
+    scale_ratio: 10
+  resource_b:
+    suggest_in_command: false
+    path: resource_font/b
+    y_position: 10
+    scale_ratio: 10
+  resource_c:
+    suggest_in_command: false
+    path: resource_font/c
+    y_position: 10
+    scale_ratio: 10
+  resource_d:
+    suggest_in_command: false
+    path: resource_font/d
+    y_position: 10
+    scale_ratio: 10
+  resource_e:
+    suggest_in_command: false
+    path: resource_font/e
+    y_position: 10
+    scale_ratio: 10
+  resource_f:
+    suggest_in_command: false
+    path: resource_font/f
+    y_position: 10
+    scale_ratio: 10
+  resource_g:
+    suggest_in_command: false
+    path: resource_font/g
+    y_position: 10
+    scale_ratio: 10
+  resource_h:
+    suggest_in_command: false
+    path: resource_font/h
+    y_position: 10
+    scale_ratio: 10
+  resource_i:
+    suggest_in_command: false
+    path: resource_font/i
+    y_position: 10
+    scale_ratio: 10
+  resource_j:
+    suggest_in_command: false
+    path: resource_font/j
+    y_position: 10
+    scale_ratio: 10
+  resource_k:
+    suggest_in_command: false
+    path: resource_font/k
+    y_position: 10
+    scale_ratio: 10
+  resource_l:
+    suggest_in_command: false
+    path: resource_font/l
+    y_position: 10
+    scale_ratio: 10
+  resource_m:
+    suggest_in_command: false
+    path: resource_font/m
+    y_position: 10
+    scale_ratio: 10
+  resource_n:
+    suggest_in_command: false
+    path: resource_font/n
+    y_position: 10
+    scale_ratio: 10
+  resource_o:
+    suggest_in_command: false
+    path: resource_font/o
+    y_position: 10
+    scale_ratio: 10
+  resource_p:
+    suggest_in_command: false
+    path: resource_font/p
+    y_position: 10
+    scale_ratio: 10
+  resource_q:
+    suggest_in_command: false
+    path: resource_font/q
+    y_position: 10
+    scale_ratio: 10
+  resource_r:
+    suggest_in_command: false
+    path: resource_font/r
+    y_position: 10
+    scale_ratio: 10
+  resource_s:
+    suggest_in_command: false
+    path: resource_font/s
+    y_position: 10
+    scale_ratio: 10
+  resource_t:
+    suggest_in_command: false
+    path: resource_font/t
+    y_position: 10
+    scale_ratio: 10
+  resource_u:
+    suggest_in_command: false
+    path: resource_font/u
+    y_position: 10
+    scale_ratio: 10
+  resource_v:
+    suggest_in_command: false
+    path: resource_font/v
+    y_position: 10
+    scale_ratio: 10
+  resource_w:
+    suggest_in_command: false
+    path: resource_font/w
+    y_position: 10
+    scale_ratio: 10
+  resource_x:
+    suggest_in_command: false
+    path: resource_font/x
+    y_position: 10
+    scale_ratio: 10
+  resource_y:
+    suggest_in_command: false
+    path: resource_font/y
+    y_position: 10
+    scale_ratio: 10
+  resource_z:
+    suggest_in_command: false
+    path: resource_font/z
+    y_position: 10
+    scale_ratio: 10
+  resource_A:
+    suggest_in_command: false
+    path: resource_font/up_a
+    y_position: 10
+    scale_ratio: 10
+  resource_B:
+    suggest_in_command: false
+    path: resource_font/up_b
+    y_position: 10
+    scale_ratio: 10
+  resource_C:
+    suggest_in_command: false
+    path: resource_font/up_c
+    y_position: 10
+    scale_ratio: 10
+  resource_D:
+    suggest_in_command: false
+    path: resource_font/up_d
+    y_position: 10
+    scale_ratio: 10
+  resource_E:
+    suggest_in_command: false
+    path: resource_font/up_e
+    y_position: 10
+    scale_ratio: 10
+  resource_F:
+    suggest_in_command: false
+    path: resource_font/up_f
+    y_position: 10
+    scale_ratio: 10
+  resource_G:
+    suggest_in_command: false
+    path: resource_font/up_g
+    y_position: 10
+    scale_ratio: 10
+  resource_H:
+    suggest_in_command: false
+    path: resource_font/up_h
+    y_position: 10
+    scale_ratio: 10
+  resource_I:
+    suggest_in_command: false
+    path: resource_font/up_i
+    y_position: 10
+    scale_ratio: 10
+  resource_J:
+    suggest_in_command: false
+    path: resource_font/up_j
+    y_position: 10
+    scale_ratio: 10
+  resource_K:
+    suggest_in_command: false
+    path: resource_font/up_k
+    y_position: 10
+    scale_ratio: 10
+  resource_L:
+    suggest_in_command: false
+    path: resource_font/up_l
+    y_position: 10
+    scale_ratio: 10
+  resource_M:
+    suggest_in_command: false
+    path: resource_font/up_m
+    y_position: 10
+    scale_ratio: 10
+  resource_N:
+    suggest_in_command: false
+    path: resource_font/up_n
+    y_position: 10
+    scale_ratio: 10
+  resource_O:
+    suggest_in_command: false
+    path: resource_font/up_o
+    y_position: 10
+    scale_ratio: 10
+  resource_P:
+    suggest_in_command: false
+    path: resource_font/up_p
+    y_position: 10
+    scale_ratio: 10
+  resource_Q:
+    suggest_in_command: false
+    path: resource_font/up_q
+    y_position: 10
+    scale_ratio: 10
+  resource_R:
+    suggest_in_command: false
+    path: resource_font/up_r
+    y_position: 10
+    scale_ratio: 10
+  resource_S:
+    suggest_in_command: false
+    path: resource_font/up_s
+    y_position: 10
+    scale_ratio: 10
+  resource_T:
+    suggest_in_command: false
+    path: resource_font/up_t
+    y_position: 10
+    scale_ratio: 10
+  resource_U:
+    suggest_in_command: false
+    path: resource_font/up_u
+    y_position: 10
+    scale_ratio: 10
+  resource_V:
+    suggest_in_command: false
+    path: resource_font/up_v
+    y_position: 10
+    scale_ratio: 10
+  resource_W:
+    suggest_in_command: false
+    path: resource_font/up_w
+    y_position: 10
+    scale_ratio: 10
+  resource_X:
+    suggest_in_command: false
+    path: resource_font/up_x
+    y_position: 10
+    scale_ratio: 10
+  resource_Y:
+    suggest_in_command: false
+    path: resource_font/up_y
+    y_position: 10
+    scale_ratio: 10
+  resource_Z:
+    suggest_in_command: false
+    path: resource_font/up_z
+    y_position: 10
+    scale_ratio: 10
+  "resource_`":
+    suggest_in_command: false
+    path: "resource_font/`"
+    y_position: 10
+    scale_ratio: 10
+  "resource_~":
+    suggest_in_command: false
+    path: "resource_font/~"
+    y_position: 10
+    scale_ratio: 10
+  "resource_!":
+    suggest_in_command: false
+    path: "resource_font/!"
+    y_position: 10
+    scale_ratio: 10
+  "resource_@":
+    suggest_in_command: false
+    path: "resource_font/@"
+    y_position: 10
+    scale_ratio: 10
+  "resource_#":
+    suggest_in_command: false
+    path: "resource_font/#"
+    y_position: 10
+    scale_ratio: 10
+  "resource_$":
+    suggest_in_command: false
+    path: "resource_font/$"
+    y_position: 10
+    scale_ratio: 10
+  "resource_%":
+    suggest_in_command: false
+    path: "resource_font/%"
+    y_position: 10
+    scale_ratio: 10
+  "resource_^":
+    suggest_in_command: false
+    path: "resource_font/^"
+    y_position: 10
+    scale_ratio: 10
+  "resource_&":
+    suggest_in_command: false
+    path: "resource_font/&"
+    y_position: 10
+    scale_ratio: 10
+  "resource_(":
+    suggest_in_command: false
+    path: "resource_font/("
+    y_position: 10
+    scale_ratio: 10
+  "resource_)":
+    suggest_in_command: false
+    path: "resource_font/)"
+    y_position: 10
+    scale_ratio: 10
+  "resource__":
+    suggest_in_command: false
+    path: "resource_font/_"
+    y_position: 10
+    scale_ratio: 10
+  "resource_-":
+    suggest_in_command: false
+    path: "resource_font/-"
+    y_position: 10
+    scale_ratio: 10
+  "resource_=":
+    suggest_in_command: false
+    path: "resource_font/="
+    y_position: 10
+    scale_ratio: 10
+  "resource_+":
+    suggest_in_command: false
+    path: "resource_font/+"
+    y_position: 10
+    scale_ratio: 10
+  "resource_[":
+    suggest_in_command: false
+    path: "resource_font/["
+    y_position: 10
+    scale_ratio: 10
+  "resource_]":
+    suggest_in_command: false
+    path: "resource_font/]"
+    y_position: 10
+    scale_ratio: 10
+  "resource_{":
+    suggest_in_command: false
+    path: "resource_font/{"
+    y_position: 10
+    scale_ratio: 10
+  "resource_;":
+    suggest_in_command: false
+    path: "resource_font/;"
+    y_position: 10
+    scale_ratio: 10
+  "resource_'":
+    suggest_in_command: false
+    path: "resource_font/'"
+    y_position: 10
+    scale_ratio: 10
+  "resource_,":
+    suggest_in_command: false
+    path: "resource_font/,"
+    y_position: 10
+    scale_ratio: 10
+  "resource_ ":
+    suggest_in_command: false
+    path: "resource_font/space"
+    y_position: 10
+    scale_ratio: 10

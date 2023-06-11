@@ -68,5 +68,8 @@ public class DisplayHandler {
 			ChatManager cm = new ChatManager(plugin);
 			cm.showMessage(player, message, prefix, block);
 		}
+
+		if (plugin.getSettings().isIAHudEnabled())
+			plugin.getIAHudManager().showTarget(player, message, plugin.getDataHandler().getCustomResourceName(block));
 	}
 }

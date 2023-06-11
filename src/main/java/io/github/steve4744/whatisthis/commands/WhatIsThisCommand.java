@@ -25,11 +25,14 @@ SOFTWARE.
 package io.github.steve4744.whatisthis.commands;
 
 import org.bukkit.ChatColor;
+import org.bukkit.NamespacedKey;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.metadata.FixedMetadataValue;
+import org.bukkit.persistence.PersistentDataContainer;
+import org.bukkit.persistence.PersistentDataType;
 
 import io.github.steve4744.whatisthis.WhatIsThis;
 import io.github.steve4744.whatisthis.utils.Utils;
@@ -67,11 +70,10 @@ public class WhatIsThisCommand implements CommandExecutor {
 				}
 
 				// Flip the hidden setting in the player
-				Player player = (Player) sender;
-				if(player.hasMetadata("WIT.hidden"))
-					player.removeMetadata("WIT.hidden", plugin);
-				else
-					player.setMetadata("WIT.hidden", new FixedMetadataValue(plugin, "off"));
+				PersistentDataContainer playerData = ((Player) sender).getPersistentDataContainer();
+				boolean display = plugin.getSettings().isPlayerDisplay(playerData);
+				plugin.getSettings().setPlayerDisplay(playerData, !display);
+				sender.sendMessage(prefix + "Automatic Display toggled " + ChatColor.AQUA + (display ? "OFF" : "ON"));
 				return true;
 
 			}

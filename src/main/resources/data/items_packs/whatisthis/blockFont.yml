@@ -1,0 +1,378 @@
+info:
+  namespace: whatisthis
+font_images:
+  block_blank:
+    suggest_in_command: false
+    path: block_font/blank
+    y_position: 25
+    scale_ratio: 25
+  block_a:
+    suggest_in_command: false
+    path: block_font/a
+    y_position: 25
+    scale_ratio: 25
+  block_b:
+    suggest_in_command: false
+    path: block_font/b
+    y_position: 25
+    scale_ratio: 25
+  block_c:
+    suggest_in_command: false
+    path: block_font/c
+    y_position: 25
+    scale_ratio: 25
+  block_d:
+    suggest_in_command: false
+    path: block_font/d
+    y_position: 25
+    scale_ratio: 25
+  block_e:
+    suggest_in_command: false
+    path: block_font/e
+    y_position: 25
+    scale_ratio: 25
+  block_f:
+    suggest_in_command: false
+    path: block_font/f
+    y_position: 25
+    scale_ratio: 25
+  block_g:
+    suggest_in_command: false
+    path: block_font/g
+    y_position: 25
+    scale_ratio: 25
+  block_h:
+    suggest_in_command: false
+    path: block_font/h
+    y_position: 25
+    scale_ratio: 25
+  block_i:
+    suggest_in_command: false
+    path: block_font/i
+    y_position: 25
+    scale_ratio: 25
+  block_j:
+    suggest_in_command: false
+    path: block_font/j
+    y_position: 25
+    scale_ratio: 25
+  block_k:
+    suggest_in_command: false
+    path: block_font/k
+    y_position: 25
+    scale_ratio: 25
+  block_l:
+    suggest_in_command: false
+    path: block_font/l
+    y_position: 25
+    scale_ratio: 25
+  block_m:
+    suggest_in_command: false
+    path: block_font/m
+    y_position: 25
+    scale_ratio: 25
+  block_n:
+    suggest_in_command: false
+    path: block_font/n
+    y_position: 25
+    scale_ratio: 25
+  block_o:
+    suggest_in_command: false
+    path: block_font/o
+    y_position: 25
+    scale_ratio: 25
+  block_p:
+    suggest_in_command: false
+    path: block_font/p
+    y_position: 25
+    scale_ratio: 25
+  block_q:
+    suggest_in_command: false
+    path: block_font/q
+    y_position: 25
+    scale_ratio: 25
+  block_r:
+    suggest_in_command: false
+    path: block_font/r
+    y_position: 25
+    scale_ratio: 25
+  block_s:
+    suggest_in_command: false
+    path: block_font/s
+    y_position: 25
+    scale_ratio: 25
+  block_t:
+    suggest_in_command: false
+    path: block_font/t
+    y_position: 25
+    scale_ratio: 25
+  block_u:
+    suggest_in_command: false
+    path: block_font/u
+    y_position: 25
+    scale_ratio: 25
+  block_v:
+    suggest_in_command: false
+    path: block_font/v
+    y_position: 25
+    scale_ratio: 25
+  block_w:
+    suggest_in_command: false
+    path: block_font/w
+    y_position: 25
+    scale_ratio: 25
+  block_x:
+    suggest_in_command: false
+    path: block_font/x
+    y_position: 25
+    scale_ratio: 25
+  block_y:
+    suggest_in_command: false
+    path: block_font/y
+    y_position: 25
+    scale_ratio: 25
+  block_z:
+    suggest_in_command: false
+    path: block_font/z
+    y_position: 25
+    scale_ratio: 25
+  block_A:
+    suggest_in_command: false
+    path: block_font/up_a
+    y_position: 25
+    scale_ratio: 25
+  block_B:
+    suggest_in_command: false
+    path: block_font/up_b
+    y_position: 25
+    scale_ratio: 25
+  block_C:
+    suggest_in_command: false
+    path: block_font/up_c
+    y_position: 25
+    scale_ratio: 25
+  block_D:
+    suggest_in_command: false
+    path: block_font/up_d
+    y_position: 25
+    scale_ratio: 25
+  block_E:
+    suggest_in_command: false
+    path: block_font/up_e
+    y_position: 25
+    scale_ratio: 25
+  block_F:
+    suggest_in_command: false
+    path: block_font/up_f
+    y_position: 25
+    scale_ratio: 25
+  block_G:
+    suggest_in_command: false
+    path: block_font/up_g
+    y_position: 25
+    scale_ratio: 25
+  block_H:
+    suggest_in_command: false
+    path: block_font/up_h
+    y_position: 25
+    scale_ratio: 25
+  block_I:
+    suggest_in_command: false
+    path: block_font/up_i
+    y_position: 25
+    scale_ratio: 25
+  block_J:
+    suggest_in_command: false
+    path: block_font/up_j
+    y_position: 25
+    scale_ratio: 25
+  block_K:
+    suggest_in_command: false
+    path: block_font/up_k
+    y_position: 25
+    scale_ratio: 25
+  block_L:
+    suggest_in_command: false
+    path: block_font/up_l
+    y_position: 25
+    scale_ratio: 25
+  block_M:
+    suggest_in_command: false
+    path: block_font/up_m
+    y_position: 25
+    scale_ratio: 25
+  block_N:
+    suggest_in_command: false
+    path: block_font/up_n
+    y_position: 25
+    scale_ratio: 25
+  block_O:
+    suggest_in_command: false
+    path: block_font/up_o
+    y_position: 25
+    scale_ratio: 25
+  block_P:
+    suggest_in_command: false
+    path: block_font/up_p
+    y_position: 25
+    scale_ratio: 25
+  block_Q:
+    suggest_in_command: false
+    path: block_font/up_q
+    y_position: 25
+    scale_ratio: 25
+  block_R:
+    suggest_in_command: false
+    path: block_font/up_r
+    y_position: 25
+    scale_ratio: 25
+  block_S:
+    suggest_in_command: false
+    path: block_font/up_s
+    y_position: 25
+    scale_ratio: 25
+  block_T:
+    suggest_in_command: false
+    path: block_font/up_t
+    y_position: 25
+    scale_ratio: 25
+  block_U:
+    suggest_in_command: false
+    path: block_font/up_u
+    y_position: 25
+    scale_ratio: 25
+  block_V:
+    suggest_in_command: false
+    path: block_font/up_v
+    y_position: 25
+    scale_ratio: 25
+  block_W:
+    suggest_in_command: false
+    path: block_font/up_w
+    y_position: 25
+    scale_ratio: 25
+  block_X:
+    suggest_in_command: false
+    path: block_font/up_x
+    y_position: 25
+    scale_ratio: 25
+  block_Y:
+    suggest_in_command: false
+    path: block_font/up_y
+    y_position: 25
+    scale_ratio: 25
+  block_Z:
+    suggest_in_command: false
+    path: block_font/up_z
+    y_position: 25
+    scale_ratio: 25
+  "block_`":
+    suggest_in_command: false
+    path: "block_font/`"
+    y_position: 25
+    scale_ratio: 25
+  "block_~":
+    suggest_in_command: false
+    path: "block_font/~"
+    y_position: 25
+    scale_ratio: 25
+  "block_!":
+    suggest_in_command: false
+    path: "block_font/!"
+    y_position: 25
+    scale_ratio: 25
+  "block_@":
+    suggest_in_command: false
+    path: "block_font/@"
+    y_position: 25
+    scale_ratio: 25
+  "block_#":
+    suggest_in_command: false
+    path: "block_font/#"
+    y_position: 25
+    scale_ratio: 25
+  "block_$":
+    suggest_in_command: false
+    path: "block_font/$"
+    y_position: 25
+    scale_ratio: 25
+  "block_%":
+    suggest_in_command: false
+    path: "block_font/%"
+    y_position: 25
+    scale_ratio: 25
+  "block_^":
+    suggest_in_command: false
+    path: "block_font/^"
+    y_position: 25
+    scale_ratio: 25
+  "block_&":
+    suggest_in_command: false
+    path: "block_font/&"
+    y_position: 25
+    scale_ratio: 25
+  "block_(":
+    suggest_in_command: false
+    path: "block_font/("
+    y_position: 25
+    scale_ratio: 25
+  "block_)":
+    suggest_in_command: false
+    path: "block_font/)"
+    y_position: 25
+    scale_ratio: 25
+  "block__":
+    suggest_in_command: false
+    path: "block_font/_"
+    y_position: 25
+    scale_ratio: 25
+  "block_-":
+    suggest_in_command: false
+    path: "block_font/-"
+    y_position: 25
+    scale_ratio: 25
+  "block_=":
+    suggest_in_command: false
+    path: "block_font/="
+    y_position: 25
+    scale_ratio: 25
+  "block_+":
+    suggest_in_command: false
+    path: "block_font/+"
+    y_position: 25
+    scale_ratio: 25
+  "block_[":
+    suggest_in_command: false
+    path: "block_font/["
+    y_position: 25
+    scale_ratio: 25
+  "block_]":
+    suggest_in_command: false
+    path: "block_font/]"
+    y_position: 25
+    scale_ratio: 25
+  "block_{":
+    suggest_in_command: false
+    path: "block_font/{"
+    y_position: 25
+    scale_ratio: 25
+  "block_;":
+    suggest_in_command: false
+    path: "block_font/;"
+    y_position: 25
+    scale_ratio: 25
+  "block_'":
+    suggest_in_command: false
+    path: "block_font/'"
+    y_position: 25
+    scale_ratio: 25
+  "block_,":
+    suggest_in_command: false
+    path: "block_font/,"
+    y_position: 25
+    scale_ratio: 25
+  "block_ ":
+    suggest_in_command: false
+    path: "block_font/space"
+    y_position: 25
+    scale_ratio: 25

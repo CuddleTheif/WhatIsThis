@@ -27,8 +27,12 @@ package io.github.steve4744.whatisthis.configuration;
 import java.util.List;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.boss.BarColor;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
+import org.bukkit.persistence.PersistentDataContainer;
+import org.bukkit.persistence.PersistentDataType;
 
 import com.google.common.base.Enums;
 
@@ -39,11 +43,13 @@ public class Settings {
 	private final WhatIsThis plugin;
 	private boolean isClickEnabled;
 	private FileConfiguration config;
+	private NamespacedKey displayKey;
 
 	public Settings(WhatIsThis plugin) {
 		this.plugin = plugin;
 		config = plugin.getConfig();
 		this.isClickEnabled = config.getBoolean("use_right_click.enabled", true);
+		this.displayKey = new NamespacedKey(this.plugin, "whatisthis.display");
 	}
 
 	public Material getClickItem() {
@@ -67,6 +73,14 @@ public class Settings {
 		return config.getStringList("IgnoreBlocks");
 	}
 
+	public boolean isCustomPrefixEnabled() {
+		return config.getBoolean("Display.prefix_custom_blocks.enabled");
+	}
+
+	public int getRefreshIntTicks(){
+		return config.getInt("Display.ia_hud.refresh_interval_ticks");
+	}
+
 	public boolean isRightClickEnabled() {
 		return isClickEnabled;
 	}
@@ -79,6 +93,10 @@ public class Settings {
 	private void saveToggle() {
 		config.set("use_right_click.enabled", isRightClickEnabled());
 		plugin.saveConfig();
+	}
+
+	public boolean isIAHudEnabled() {
+		return config.getBoolean("Display.ia_hud.enabled", true);
 	}
 
 	public boolean isScoreboardEnabled() {
@@ -105,8 +123,32 @@ public class Settings {
 		return config.getBoolean("Display.chat.show_drops", true);
 	}
 
-	public boolean isCustomPrefixEnabled() {
-		return config.getBoolean("Display.prefix_custom_blocks.enabled");
+	public int getIAHudOffset() {
+		return plugin.getConfig().getInt("Display.ia_hud.offset", 0);
+	}
+
+	public int getIAHudPadding() {
+		return plugin.getConfig().getInt("Display.ia_hud.padding", 0);
+	}
+
+	public int getDisplayTime() {
+		return plugin.getConfig().getInt("Display.display_time", 60);
+	}
+
+	public boolean isPlayerDisplay(PersistentDataContainer playerData){
+		return playerData.getOrDefault(this.displayKey, PersistentDataType.BYTE, (byte) 0).equals((byte) 1);
+	}
+
+	public void initPlayer(PersistentDataContainer playerData){
+		if(!playerData.has(this.displayKey, PersistentDataType.BYTE))
+			this.setPlayerDisplay(playerData, true);
+	}
+
+	public void setPlayerDisplay(PersistentDataContainer playerData, boolean display){
+		if(display)
+			playerData.set(this.displayKey, PersistentDataType.BYTE, (byte) 1);
+		else
+			playerData.set(this.displayKey, PersistentDataType.BYTE, (byte) 0);
 	}
 
 	public String getActionBarColor() {

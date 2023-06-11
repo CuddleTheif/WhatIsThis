@@ -26,6 +26,7 @@ package io.github.steve4744.whatisthis;
 
 import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
+import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -36,18 +37,22 @@ import io.github.steve4744.whatisthis.commands.WhatIsThisCommand;
 import io.github.steve4744.whatisthis.configuration.Settings;
 import io.github.steve4744.whatisthis.data.DataHandler;
 import io.github.steve4744.whatisthis.display.DisplayHandler;
+import io.github.steve4744.whatisthis.display.IAHudManager;
 import io.github.steve4744.whatisthis.display.ScoreboardManager;
 import io.github.steve4744.whatisthis.lang.EnumLang;
+import io.github.steve4744.whatisthis.listeners.ItemAdderListener;
 import io.github.steve4744.whatisthis.listeners.PlayerMoveListener;
 import io.github.steve4744.whatisthis.listeners.WhatIsThisListener;
 
 public class WhatIsThis extends JavaPlugin {
 
-	private static WhatIsThis instance;
+	public static WhatIsThis instance;
 	private String version;
 	private ScoreboardManager scoreboardManager;
 	private DataHandler dataHandler;
 	private Settings settings;
+	private IAHudManager iaHudManager;
+	private ItemAdderListener itemAdderListener;
 	private DisplayHandler displayHandler;
 	private boolean placeholderapi;
 	private static final int BSTATS_PLUGIN_ID = 4079;
@@ -90,6 +95,10 @@ public class WhatIsThis extends JavaPlugin {
 		return scoreboardManager;
 	}
 
+	public IAHudManager getIAHudManager() {
+		return iaHudManager;
+	}
+
 	public DataHandler getDataHandler() {
 		return dataHandler;
 	}
@@ -115,11 +124,33 @@ public class WhatIsThis extends JavaPlugin {
 			getLogger().info("Successfully linked with PlaceholderAPI, version " + PlaceholderAPI.getDescription().getVersion());
 			new WhatIsThisPlaceholders(this).register();
 		}
+
+		if(this.getServer().getPluginManager().isPluginEnabled("ItemsAdder"))
+			this.createIAHud();
+	}
+
+	public void createIAHud(){
+		if(this.settings.isIAHudEnabled()){
+			this.iaHudManager = new IAHudManager(this);
+			this.itemAdderListener = new ItemAdderListener(this);
+			Bukkit.getPluginManager().registerEvents(this.itemAdderListener, this);
+		}
+	}
+
+	public void removeIAHud(){
+		if(this.iaHudManager!=null){
+			HandlerList.unregisterAll(this.itemAdderListener);
+			this.itemAdderListener = null;
+			this.iaHudManager.cleanup();
+			this.iaHudManager = null;
+		}
 	}
 
 	public void reloadPlugin() {
 		reloadConfig();
 		refreshSettings();
+		removeIAHud();
+		createIAHud();
 	}
 
 	private void refreshSettings() {

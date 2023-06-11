@@ -32,16 +32,20 @@ import java.util.Map;
 import java.util.Set;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
 import com.google.common.base.Enums;
 
 import io.github.steve4744.whatisthis.WhatIsThis;
 import io.github.steve4744.whatisthis.lang.EnumLang;
 import io.github.steve4744.whatisthis.utils.OraxenHandler;
 import io.github.steve4744.whatisthis.utils.Utils;
+import io.github.steve4744.whatisthis.utils.LiquidTanksHandler;
 import io.github.steve4744.whatisthis.utils.NovaHandler;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
@@ -54,6 +58,7 @@ public class DataHandler {
 	private boolean slimefun;
 	private boolean itemsadder;
 	private boolean oraxen;
+	private boolean liquidtanks;
 	private Map<String, Integer> itemDrops = new HashMap<>();  // material -> amount
 
 	public DataHandler(WhatIsThis plugin) {
@@ -62,6 +67,7 @@ public class DataHandler {
 		this.nova = plugin.getServer().getPluginManager().isPluginEnabled("Nova");
 		this.itemsadder = plugin.getServer().getPluginManager().isPluginEnabled("ItemsAdder");
 		this.oraxen = plugin.getServer().getPluginManager().isPluginEnabled("Oraxen");
+		this.liquidtanks = plugin.getServer().getPluginManager().isPluginEnabled("LiquidTanks");
 	}
 
 	/**
@@ -79,6 +85,8 @@ public class DataHandler {
 			this.itemsadder = true;
 		else if(plugin.equals("Oraxen"))
 			this.oraxen = true;
+		else if(plugin.equals("LiquidTanks"))
+			this.liquidtanks = true;
 	}
 
 	/**
@@ -121,6 +129,10 @@ public class DataHandler {
 		if (isOraxenBlock(block)) {
 			return ChatColor.stripColor(OraxenHandler.getOraxenDisplayName(block));
 		}
+		String tankName = getLiquidTankName(block);
+		if(tankName!=null){
+			return ChatColor.stripColor(tankName);
+		}
 
 		String targetName = block.getType().toString();
 		//coloured wall_banners are not currently in the Mojang language files
@@ -130,7 +142,7 @@ public class DataHandler {
 
 		return translateItemName(targetName, player);
 	}
-
+	
 	/**
 	 * Get the text to display the 'Drops'. Can be translated to suit server language.
 	 * @return text for 'Drops'
@@ -353,6 +365,13 @@ public class DataHandler {
 		return OraxenHandler.isOraxen(block);
 	}
 
+	private String getLiquidTankName(Block block) {
+		if (!liquidtanks) {
+			return null;
+		}
+		return LiquidTanksHandler.getTankDisplayName(block.getLocation());
+	}
+
 	public String getCustomResourceName(Block block) {
 		if (isSlimefunBlock(block)) {
 			return "Slimefun";
@@ -362,6 +381,8 @@ public class DataHandler {
 			return "ItemsAdder";
 		} else if (isOraxenBlock(block)) {
 			return "Oraxen";
+		}else if (getLiquidTankName(block)!=null) {
+			return "LiquidTanks";
 		}
 		return "";
 	}

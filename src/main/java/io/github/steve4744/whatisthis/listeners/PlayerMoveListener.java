@@ -45,9 +45,12 @@ public class PlayerMoveListener implements Listener {
 		if (!plugin.getSettings().isAutoDisplayEnabled()) {
 			return;
 		}
+		try{
 		Player player = event.getPlayer();
-		if (player.hasPermission("whatisthis.use") && !player.hasMetadata("WIT.hidden")) {
+		if (player.hasPermission("whatisthis.use") && plugin.getSettings().isPlayerDisplay(player.getPersistentDataContainer())) {
 			plugin.getDisplayHandler().getVisualMethod(Utils.getTargetBlock(player), player);
 		}
+        plugin.getIAHudManager().checkUI(event.getPlayer().getUniqueId());
+		}catch(NullPointerException e){}
 	}
 }

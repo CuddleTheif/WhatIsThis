@@ -33,6 +33,7 @@ PlaceholderAPI:
 # Enable the preferred method(s) to display the block info
 Display:
   auto_display: false
+  display_time: 60
   prefix_custom_blocks:
     enabled: true
     prefix: '&7[&f{PREFIX}&7] '
@@ -50,6 +51,9 @@ Display:
     name_color: GREEN
     drop_color: RED
     show_drops: true
+  ia_hud:
+    enabled: true
+    offset: 0
 IgnoreBlocks:
 - AIR
 - CAVE_AIR

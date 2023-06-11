@@ -1,0 +1,19 @@
+info:
+  namespace: whatisthis
+font_images:
+  background:
+    suggest_in_command: false
+    path: background
+    y_position: 35
+  background_start:
+    suggest_in_command: false
+    path: background_start
+    y_position: 35
+  background_middle:
+    suggest_in_command: false
+    path: background_middle
+    y_position: 35
+  background_end:
+    suggest_in_command: false
+    path: background_end
+    y_position: 35
